@@ -1,0 +1,47 @@
+[Container]
+列出container清單
+$ docker container ls
+
+Stop Container
+$ docker stop [CONTAINER NAME]
+
+Remove container
+$ docker rm [CONTAINER NAME]
+Remove all containers
+$ docker rm $(docker container ls -aq)
+
+Kill running docker container
+$ docker kill [container ID]
+kill all containers
+$ docker kill $(docker ps -q)
+
+[Image]
+Download Image
+$ docker run [IMAGE NAME]
+$ docker pull [IMAGE NAME]
+List Images
+$ docker images
+Remove Images
+$ docker rmi [IMAGE NAME]
+Create image
+$ docker image build -t ${image_name} path/to/Dockerfile
+Remove All Images 
+$ docker rmi $(docker images -a -q)
+
+[EXEC]
+$ docker exec [CONTAINER NAME] cat /bin/bash
+
+[Docker Compose]
+Start Docker
+$ docker-compose up 
+Stop Container
+$ docker-compose stop /
+
+
+查運行的process
+$ docker ps 
+查全部的process
+$ docker ps -a
+
+
+

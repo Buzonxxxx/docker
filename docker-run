@@ -1,0 +1,20 @@
+[Port]
+docker run 指定port
+$ docker run -p 9090:8080 tomcat:latest
+
+[Tag]
+docker run with version tag
+$ docker run Ubuntu:17.04
+
+[Volume mapping]
+$ docker run -v /opt/datadir:/var/lib/mysql mysql
+
+[Inspect]
+$ docker inspect [CONTAINER ID]
+
+[Jenkins]
+$ docker run -p 80:8080 -v /root/my-jenkins-data:/var/jenkins_home -u root jenkins
+$ docker exec [CONTAINER ID] cat /var/jenkins_home/secrets/initialAdminPassword
+
+
+
